@@ -38,9 +38,32 @@
 
     <div class="form-group">
         <label for="agua">Agua</label>
-        <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua">
+        <!-- <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua"> -->
+        <select name="agua" class="form-control" [(ngModel)]="planeta.agua">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select> 
     </div>
 
     <button class="btn btn-dark btn-sm mt-4">Actualizar</button>
 </form>
 <button class="btn btn-secondary btn-sm mt-4"  routerLink="/planetas">Cancelar</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th> <!-- scope = alcance-->
+            <th scope="col">Nombre</th>
+            <th scope="col">Género</th>
+            <th scope="col">Visitas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let per of personas">
+            <th scope="row">{{ per.id }}</th>
+            <td>{{ per.nombre }}</td>
+            <td>{{ per.genero }}</td>
+            <td>{{ per.visitas }}</td>
+        </tr>
+    </tbody>
+</table>

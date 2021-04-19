@@ -32,7 +32,11 @@
 
     <div class="form-group">
         <label for="agua">Agua</label>
-        <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua">
+        <!-- <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua"> -->
+        <select name="agua" class="form-control" [(ngModel)]="planeta.agua">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
     </div>
 
     <button class="btn btn-dark btn-sm mt-4">Crear</button>
