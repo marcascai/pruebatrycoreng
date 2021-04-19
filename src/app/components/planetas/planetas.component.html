@@ -1,0 +1,62 @@
+<p>Planetas</p>
+<form (ngSubmit)="insertData()">
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" class="form-control" [(ngModel)]="planeta.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="periodo">Periodo</label>
+        <input type="number" name="periodo" class="form-control" [(ngModel)]="planeta.periodo">
+    </div>
+
+    <div class="form-group">
+        <label for="diametro">Diametro</label>
+        <input type="number" name="diametro" class="form-control" [(ngModel)]="planeta.diametro">
+    </div>
+
+    <div class="form-group">
+        <label for="clima">Clima</label>
+        <input type="text" name="clima" class="form-control" [(ngModel)]="planeta.clima">
+    </div>
+
+    <div class="form-group">
+        <label for="terreno">Terreno</label>
+        <input type="text" name="terreno" class="form-control" [(ngModel)]="planeta.terreno">
+    </div>
+
+    <div class="form-group">
+        <label for="gravedad">Gravedad</label>
+        <input type="text" name="gravedad" class="form-control" [(ngModel)]="planeta.gravedad">
+    </div>
+
+    <div class="form-group">
+        <label for="agua">Agua</label>
+        <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Crear</button>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th> <!-- scope = alcance-->
+            <th scope="col">Nombre</th>
+            <th scope="col">Periodo</th>
+            <th scope="col">Visitas</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plt of planetas">
+            <th scope="row">{{ plt.id }}</th>
+            <td>{{ plt.nombre }}</td>
+            <td>{{ plt.periodo }}</td>
+            <td>{{ plt.visitas }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(plt.id)">Eliminar</button>
+                <button class="btn btn-warning btn-sm mx-2" routerLink="/editplanetas/{{plt.id}}">Detalles/Editar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

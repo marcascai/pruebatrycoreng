@@ -1,0 +1,46 @@
+<p>Editar Planetas</p>
+
+<form (ngSubmit)="updatePlaneta()">
+    <div class="form-group">
+        <label for="visitas">Visitas</label>
+        <input type="number" name="visitas" class="form-control" [(ngModel)]="planeta.visitas" readonly>
+    </div>
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" class="form-control" [(ngModel)]="planeta.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="periodo">Periodo</label>
+        <input type="number" name="periodo" class="form-control" [(ngModel)]="planeta.periodo">
+    </div>
+
+    <div class="form-group">
+        <label for="diametro">Diametro</label>
+        <input type="number" name="diametro" class="form-control" [(ngModel)]="planeta.diametro">
+    </div>
+
+    <div class="form-group">
+        <label for="clima">Clima</label>
+        <input type="text" name="clima" class="form-control" [(ngModel)]="planeta.clima">
+    </div>
+
+    <div class="form-group">
+        <label for="terreno">Terreno</label>
+        <input type="text" name="terreno" class="form-control" [(ngModel)]="planeta.terreno">
+    </div>
+
+    <div class="form-group">
+        <label for="gravedad">Gravedad</label>
+        <input type="text" name="gravedad" class="form-control" [(ngModel)]="planeta.gravedad">
+    </div>
+
+    <div class="form-group">
+        <label for="agua">Agua</label>
+        <input type="text" name="agua" class="form-control" [(ngModel)]="planeta.agua">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Actualizar</button>
+</form>
+<button class="btn btn-secondary btn-sm mt-4"  routerLink="/planetas">Cancelar</button>

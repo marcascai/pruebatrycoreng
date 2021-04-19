@@ -1,0 +1,21 @@
+<p>Personas top 3</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th> <!-- scope = alcance-->
+            <th scope="col">Nombre</th>
+            <th scope="col">Género</th>
+            <th scope="col">Visitas</th>
+            <th scope="col">Planeta</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let per of personas">
+            <th scope="row">{{ per.id }}</th>
+            <td>{{ per.nombre }}</td>
+            <td>{{ per.genero }}</td>
+            <td>{{ per.visitas }}</td>
+            <td>{{ per.nombreplaneta }}</td>
+        </tr>
+    </tbody>
+</table>

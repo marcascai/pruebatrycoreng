@@ -1,0 +1,19 @@
+<p>Planetas top 3</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th> <!-- scope = alcance-->
+            <th scope="col">Nombre</th>
+            <th scope="col">Periodo</th>
+            <th scope="col">Visitas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let plt of planetas">
+            <th scope="row">{{ plt.id }}</th>
+            <td>{{ plt.nombre }}</td>
+            <td>{{ plt.periodo }}</td>
+            <td>{{ plt.visitas }}</td>
+        </tr>
+    </tbody>
+</table>

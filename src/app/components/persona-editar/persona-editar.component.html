@@ -1,0 +1,57 @@
+<form (ngSubmit)="updatePersona()">
+    <div class="form-group">
+        <label for="visitas">Visitas</label>
+        <input type="number" name="visitas" class="form-control" [(ngModel)]="persona.visitas" readonly>
+    </div>
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" class="form-control" [(ngModel)]="persona.nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="genero">Genero</label>
+        <!-- <input type="text" name="genero" class="form-control" [(ngModel)]="persona.genero"> -->
+        <select name="genero" class="form-control" [(ngModel)]="persona.genero">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+        </select> 
+    </div>
+
+    <div class="form-group">
+        <label for="altura">Altura</label>
+        <input type="text" name="altura" class="form-control" [(ngModel)]="persona.altura">
+    </div>
+
+    <div class="form-group">
+        <label for="peso">Peso</label>
+        <input type="number" placeholder="Terrestre Kg" name="peso" class="form-control" [(ngModel)]="persona.peso">
+    </div>
+
+    <div class="form-group">
+        <label for="nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="nacimiento" class="form-control" [(ngModel)]="persona.nacimiento">
+    </div>
+
+    <div class="form-group">
+        <label for="planeta">Planeta</label>
+        <!-- <input type="text" name="planeta" class="form-control" [(ngModel)]="persona.planeta"> -->
+        <select name="planeta" class="form-control" [(ngModel)]="persona.planeta">
+            <option [value]="item.id" *ngFor="let item of planetas">{{item.nombre}}</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="color">Color</label>
+        <input type="text" name="color" class="form-control" [(ngModel)]="persona.color">
+    </div>
+
+    <div class="form-group">
+        <label for="elemento">Elemento</label>
+        <input type="text" name="elemento" class="form-control" [(ngModel)]="persona.elemento">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Actualizar</button>
+</form>
+
+<button class="btn btn-secondary btn-sm mt-4" routerLink="/personas">Cancelar</button>
