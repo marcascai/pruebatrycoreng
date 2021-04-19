@@ -1,5 +1,6 @@
 # pruebatrycoreng
  Proyecto Angular con las vistas para personas y planetas
+ 
  El proyecto contiene el archivo package.json que almacena el historial de paquetes y dependencias en el proyecto,
  de este se genera la carpeta "node_modules" que es donde se almacenan todas las dependencias y librerías usadas en el proyecto nodejs.
  
